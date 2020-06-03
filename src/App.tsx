@@ -3,6 +3,7 @@ import "./styles/tailwind/main.css";
 import './App.css';
 import Intro from './components/Intro'
 import AboutMe from './components/AboutMe'
+import Skills from './components/Skills'
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
       <>
         <Intro />
         <AboutMe />
+        <Skills />
       </>
     )
   }
