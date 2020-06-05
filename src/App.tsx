@@ -6,7 +6,9 @@ import Intro from './components/Intro'
 import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
 
-class App extends Component { 
+type MyState = { data: string };
+
+class App extends React.Component<MyState> { 
 
   constructor(props : any) {
     super(props)
@@ -16,7 +18,7 @@ class App extends Component {
   componentDidMount() {
     axios.get('./data/data.json').then(res => {
       // console.log(res.data)
-      { this.setState({ data : res.data}) }
+      { this.setState({ data : res.data.data}) }
     })
   }
 
